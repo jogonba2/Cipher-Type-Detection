@@ -22,11 +22,11 @@ if __name__ == "__main__":
     
     # Uncomment after samples generation #
     
-    synthetic_samples,synthetic_classes = cr.generate_synthetic_samples(500,16,4)
+    synthetic_samples,synthetic_classes = cr.generate_synthetic_hash_samples(1000,16,4)
     
     cr.generate_corpus(synthetic_samples,synthetic_classes,fname_train_samples,
     	fname_train_classes,fname_test_samples,fname_test_classes,0.8)
-    
+    print "Corpus generado"
     ######################################
     
     X_train,Y_train,X_test,Y_test = cr.load_corpus(fname_train_samples,fname_train_classes,
